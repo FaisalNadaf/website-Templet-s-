@@ -1,0 +1,234 @@
+/** @format */
+
+.feature-banner {
+	width: 100%;
+	height: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	padding: 0 8% 0 8%;
+	margin: 40px 0 40px 0;
+	color: black;
+}
+
+.feature-banner .feature-card {
+	height: 180px;
+	width: 16%;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.feature-banner .feature-card div img {
+	height: 70px;
+}
+
+.feature-banner .feature-card div {
+	width: 100%;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.feature-banner .feature-card p {
+	text-align: center;
+	width: 95%;
+	font-weight: 500;
+}
+
+/* Media Queries */
+
+/* For small devices (phones, less than 600px) */
+@media only screen and (max-width: 600px) {
+	.feature-banner {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.feature-banner .feature-card {
+		width: 90%; /* Adjust width for small screens */
+		margin-bottom: 20px;
+	}
+}
+
+/* For tablets (600px - 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+	.feature-banner {
+		flex-direction: row;
+		flex-wrap: wrap;
+		height: auto;
+	}
+
+	.feature-banner .feature-card {
+		width: 45%; /* Adjust width for tablets */
+		margin-bottom: 20px;
+	}
+}
+
+/* For medium devices (768px - 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.feature-banner .feature-card {
+		width: 30%; /* Adjust width for medium devices */
+	}
+}
+
+/* For large devices (desktops, 1024px and up) */
+@media only screen and (min-width: 1024px) {
+	.feature-banner .feature-card {
+		width: 16%; /* Default width for large screens */
+	}
+}
+
+.Banner01-container {
+	background-image: url("../../../public/assets/img/banner/banner28.jpg");
+	height: 380px;
+	width: 100%;
+	margin: 20px 0px;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.Banner01-main {
+		height: 70%;
+		width: 85%;
+
+		div {
+			font-size: 32px;
+			font-weight: 500;
+			line-height: 46px;
+		}
+
+		.btn-Banner01 {
+			width: 200px;
+			font-size: large;
+			color: white;
+			background-color: #f66e43;
+			padding: 10px 10px;
+			margin: 20px 0px;
+			border-radius: 5px;
+			border: none;
+		}
+
+		.btn-hover {
+			button {
+				position: relative;
+				isolation: isolate;
+				transition: all 0.5s ease-in-out 0s;
+
+				&:hover {
+					color: black;
+					border: 1px solid $theme-color;
+				}
+
+				&::before,
+				&::after {
+					position: absolute;
+					z-index: -1;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					content: "";
+					transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+				}
+
+				&::after {
+					right: 0;
+					left: auto;
+					width: 0;
+					background: $theme-color;
+				}
+
+				&:hover::after {
+					right: auto;
+					left: 0;
+					width: 100%;
+				}
+			}
+
+			&--blue {
+				a,
+				button {
+					&:hover {
+						border-color: #053399 !important;
+					}
+
+					&::after {
+						background: #053399;
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Media Queries */
+
+/* Small devices (phones, up to 576px) */
+@media (max-width: 576px) {
+	.Banner01-container {
+		height: 300px;
+
+		.Banner01-main div {
+			font-size: 20px;
+			line-height: 30px;
+		}
+
+		.btn-Banner01 {
+			width: 150px;
+			font-size: medium;
+		}
+	}
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 768px) {
+	.Banner01-container {
+		height: 350px;
+
+		.Banner01-main div {
+			font-size: 24px;
+			line-height: 36px;
+		}
+
+		.btn-Banner01 {
+			width: 170px;
+			font-size: large;
+		}
+	}
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 992px) {
+	.Banner01-container {
+		height: 380px;
+
+		.Banner01-main div {
+			font-size: 28px;
+			line-height: 40px;
+		}
+
+		.btn-Banner01 {
+			width: 180px;
+		}
+	}
+}
+
+/* Extra large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+	.Banner01-container {
+		height: 400px;
+
+		.Banner01-main div {
+			font-size: 32px;
+			line-height: 46px;
+		}
+
+		.btn-Banner01 {
+			width: 200px;
+		}
+	}
+}
