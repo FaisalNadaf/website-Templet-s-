@@ -21,7 +21,7 @@ const TabProductSixteen = ({
           borderClass="no-border"
         />
         <Tab.Container defaultActiveKey="bestSeller">
-          {/* <Nav
+          <Nav
             variant="pills"
             className={clsx("product-tab-list-5 mb-60 justify-content-center", productTabClass)}
           >
@@ -40,7 +40,7 @@ const TabProductSixteen = ({
                 <h4>Sale Items</h4>
               </Nav.Link>
             </Nav.Item>
-          </Nav> */}
+          </Nav>
           <Tab.Content>
             <Tab.Pane eventKey="newArrival">
               <div className="row">

@@ -20,7 +20,7 @@ const TabProductEleven = ({
       <div className="container">
         <div className="product-tab-slider-wrapper position-relative">
           <Tab.Container defaultActiveKey="saleItems">
-            {/* <div className="product-top-bar section-border mb-60">
+            <div className="product-top-bar section-border mb-60">
               <SectionTitleFive titleText={sectionTitle} />
               <Nav
                 variant="pills"
@@ -42,9 +42,9 @@ const TabProductEleven = ({
                   </Nav.Link>
                 </Nav.Item>
               </Nav>
-            </div> */}
+            </div>
             <Tab.Content>
-              {/* <Tab.Pane eventKey="newArrival">
+              <Tab.Pane eventKey="newArrival">
                   <ProductGridTwelve
                     category={category}
                     type="new"
@@ -61,7 +61,7 @@ const TabProductEleven = ({
                     spaceBottomClass="mb-25"
                     colorClass={colorClass}
                   />
-              </Tab.Pane> */}
+              </Tab.Pane>
               <Tab.Pane eventKey="saleItems">
                   <ProductGridTwelve
                     category={category}

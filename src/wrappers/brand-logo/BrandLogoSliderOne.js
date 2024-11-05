@@ -28,7 +28,7 @@ const BrandLogoSliderOne = ({ spaceBottomClass, spaceTopClass }) => {
   return (
     <div className={clsx("brand-logo-area", spaceBottomClass, spaceTopClass)}>
       <div className="container">
-        <div className="brand-logo-active ">
+        <div className="brand-logo-active">
           {brandLogoData && (
             <Swiper options={settings}>
               {brandLogoData.map((single, key) => (
